@@ -1,0 +1,68 @@
+@:directlyUsed @:used @:keep @:noDoc
+class hl.types.BytesIterator_Float {
+
+	public function new[Function:(a : hl.types.ArrayBytes_Float) -> Void]
+		[Arg:hl.types.ArrayBytes_Float] [Local a(4215):hl.types.ArrayBytes_Float]
+		[Block:hl.types.ArrayBytes_Float]
+			[Binop:hl.types.ArrayBytes_Float]
+				[Field:hl.types.ArrayBytes_Float]
+					[Const:hl.types.BytesIterator_Float] this
+					[FInstance:hl.types.ArrayBytes_Float]
+						hl.types.BytesIterator_Float
+						a:hl.types.ArrayBytes_Float
+				=
+				[Local a(4215):hl.types.ArrayBytes_Float:hl.types.ArrayBytes_Float]
+
+	var pos:Int;
+
+	var a:hl.types.ArrayBytes_Float;
+
+	@:maybeUsed
+	public function hasNext[Function:Void -> Bool]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Binop:Bool]
+					[Field:Int]
+						[Const:hl.types.BytesIterator_Float] this
+						[FInstance:Int]
+							hl.types.BytesIterator_Float
+							pos:Int
+					<
+					[Field:Int]
+						[Field:hl.types.ArrayBytes_Float]
+							[Const:hl.types.BytesIterator_Float] this
+							[FInstance:hl.types.ArrayBytes_Float]
+								hl.types.BytesIterator_Float
+								a:hl.types.ArrayBytes_Float
+						[FInstance:Int]
+							hl.types.ArrayBase
+							length:Int
+
+	@:maybeUsed
+	public function next[Function:Void -> Float]
+		[Block:Dynamic]
+			[Var this1(4213):hl.BytesAccess<Float>]
+				[Field:hl.BytesAccess<Float>]
+					[Field:hl.types.ArrayBytes_Float]
+						[Const:hl.types.BytesIterator_Float] this
+						[FInstance:hl.types.ArrayBytes_Float]
+							hl.types.BytesIterator_Float
+							a:hl.types.ArrayBytes_Float
+					[FInstance:hl.BytesAccess<Float>]
+						hl.types.ArrayBytes_Float
+						bytes:hl.BytesAccess<Float>
+			[Var pos(4214):Int]
+				[Unop:Int]
+					++
+					Postfix
+					[Field:Int]
+						[Const:hl.types.BytesIterator_Float] this
+						[FInstance:Int]
+							hl.types.BytesIterator_Float
+							pos:Int
+			[Return:Dynamic]
+				[Call:Float]
+					[Ident:(hl.BytesAccess<Float>, Int) -> Unknown<41>] $bget
+					[Cast:hl.BytesAccess<Float>] [Local this1(4213):hl.BytesAccess<Float>:hl.BytesAccess<Float>]
+					[Local pos(4214):Int:Int]
+}

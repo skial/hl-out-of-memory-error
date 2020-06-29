@@ -1,0 +1,16 @@
+OCAMLRUNPARAM=b haxe build.hxml
+Fatal error: exception Out of memory
+Raised by primitive operation at file "pMap.ml", line 81, characters 20-27
+Called from file "pMap.ml", line 122, characters 16-23
+Called from file "_build/src/generators/hlcode.ml", line 386, characters 5-22
+Called from file "array.ml", line 90, characters 31-48
+Called from file "_build/src/generators/hlcode.ml", line 410, characters 2-41
+Called from file "array.ml", line 90, characters 31-48
+Called from file "_build/src/generators/hlcode.ml", line 408, characters 1-188
+Called from file "_build/src/generators/genhl.ml", line 3628, characters 25-42
+Called from file "_build/src/generators/genhl.ml", line 4074, characters 2-65
+Called from file "_build/src/compiler/main.ml", line 343, characters 2-14
+Called from file "_build/src/compiler/main.ml", line 1059, characters 25-62
+Re-raised at file "_build/src/compiler/main.ml", line 1205, characters 2-11
+Called from file "_build/src/compiler/main.ml", line 633, characters 3-11
+Called from file "_build/src/compiler/main.ml", line 1220, characters 1-35

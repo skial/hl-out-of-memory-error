@@ -1,0 +1,81 @@
+@:used @:noDoc
+class hl.NativeArrayIterator_Dynamic {
+
+	public inline function new[Function:(arr : hl.NativeArray<Dynamic>) -> Void]
+		[Arg:hl.NativeArray<Dynamic>] [Local arr(3788):hl.NativeArray<Dynamic>]
+		[Block:Int]
+			[Binop:hl.NativeArray<Dynamic>]
+				[Field:hl.NativeArray<Dynamic>]
+					[Const:hl.NativeArrayIterator_Dynamic] this
+					[FInstance:hl.NativeArray<Dynamic>]
+						hl.NativeArrayIterator_Dynamic
+						arr:hl.NativeArray<Dynamic>
+				=
+				[Local arr(3788):hl.NativeArray<Dynamic>:hl.NativeArray<Dynamic>]
+			[Binop:Int]
+				[Field:Int]
+					[Const:hl.NativeArrayIterator_Dynamic] this
+					[FInstance:Int]
+						hl.NativeArrayIterator_Dynamic
+						pos:Int
+				=
+				[Const:Int] 0
+			[Binop:Int]
+				[Field:Int]
+					[Const:hl.NativeArrayIterator_Dynamic] this
+					[FInstance:Int]
+						hl.NativeArrayIterator_Dynamic
+						length:Int
+				=
+				[Call:Int]
+					[Ident:hl.NativeArray<Dynamic> -> Unknown<16>] $asize
+					[Cast:hl.NativeArray<Dynamic>] [Local arr(3788):hl.NativeArray<Dynamic>:hl.NativeArray<Dynamic>]
+
+	var arr:hl.NativeArray<Dynamic>;
+
+	var pos:Int;
+
+	var length:Int;
+
+	@:maybeUsed
+	public inline function hasNext[Function:Void -> Bool]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Binop:Bool]
+					[Field:Int]
+						[Const:hl.NativeArrayIterator_Dynamic] this
+						[FInstance:Int]
+							hl.NativeArrayIterator_Dynamic
+							pos:Int
+					<
+					[Field:Int]
+						[Const:hl.NativeArrayIterator_Dynamic] this
+						[FInstance:Int]
+							hl.NativeArrayIterator_Dynamic
+							length:Int
+
+	@:maybeUsed
+	public inline function next[Function:Void -> Dynamic]
+		[Block:Dynamic]
+			[Var this1(3842):hl.NativeArray<Dynamic>]
+				[Field:hl.NativeArray<Dynamic>]
+					[Const:hl.NativeArrayIterator_Dynamic] this
+					[FInstance:hl.NativeArray<Dynamic>]
+						hl.NativeArrayIterator_Dynamic
+						arr:hl.NativeArray<Dynamic>
+			[Var pos(3843):Int]
+				[Unop:Int]
+					++
+					Postfix
+					[Field:Int]
+						[Const:hl.NativeArrayIterator_Dynamic] this
+						[FInstance:Int]
+							hl.NativeArrayIterator_Dynamic
+							pos:Int
+			[Return:Dynamic]
+				[Cast:Dynamic]
+					[Call:Dynamic]
+						[Ident:(hl.NativeArray<Dynamic>, Int) -> Dynamic] $aget
+						[Cast:hl.NativeArray<Dynamic>] [Local this1(3842):hl.NativeArray<Dynamic>:hl.NativeArray<Dynamic>]
+						[Local pos(3843):Int:Int]
+}

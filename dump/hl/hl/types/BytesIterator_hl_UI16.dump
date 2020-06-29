@@ -1,0 +1,68 @@
+@:directlyUsed @:used @:keep @:noDoc
+class hl.types.BytesIterator_hl_UI16 {
+
+	public function new[Function:(a : hl.types.ArrayBytes_hl_UI16) -> Void]
+		[Arg:hl.types.ArrayBytes_hl_UI16] [Local a(3933):hl.types.ArrayBytes_hl_UI16]
+		[Block:hl.types.ArrayBytes_hl_UI16]
+			[Binop:hl.types.ArrayBytes_hl_UI16]
+				[Field:hl.types.ArrayBytes_hl_UI16]
+					[Const:hl.types.BytesIterator_hl_UI16] this
+					[FInstance:hl.types.ArrayBytes_hl_UI16]
+						hl.types.BytesIterator_hl_UI16
+						a:hl.types.ArrayBytes_hl_UI16
+				=
+				[Local a(3933):hl.types.ArrayBytes_hl_UI16:hl.types.ArrayBytes_hl_UI16]
+
+	var pos:Int;
+
+	var a:hl.types.ArrayBytes_hl_UI16;
+
+	@:maybeUsed
+	public function hasNext[Function:Void -> Bool]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Binop:Bool]
+					[Field:Int]
+						[Const:hl.types.BytesIterator_hl_UI16] this
+						[FInstance:Int]
+							hl.types.BytesIterator_hl_UI16
+							pos:Int
+					<
+					[Field:Int]
+						[Field:hl.types.ArrayBytes_hl_UI16]
+							[Const:hl.types.BytesIterator_hl_UI16] this
+							[FInstance:hl.types.ArrayBytes_hl_UI16]
+								hl.types.BytesIterator_hl_UI16
+								a:hl.types.ArrayBytes_hl_UI16
+						[FInstance:Int]
+							hl.types.ArrayBase
+							length:Int
+
+	@:maybeUsed
+	public function next[Function:Void -> hl.UI16]
+		[Block:Dynamic]
+			[Var this1(3931):hl.BytesAccess<hl.UI16>]
+				[Field:hl.BytesAccess<hl.UI16>]
+					[Field:hl.types.ArrayBytes_hl_UI16]
+						[Const:hl.types.BytesIterator_hl_UI16] this
+						[FInstance:hl.types.ArrayBytes_hl_UI16]
+							hl.types.BytesIterator_hl_UI16
+							a:hl.types.ArrayBytes_hl_UI16
+					[FInstance:hl.BytesAccess<hl.UI16>]
+						hl.types.ArrayBytes_hl_UI16
+						bytes:hl.BytesAccess<hl.UI16>
+			[Var pos(3932):Int]
+				[Unop:Int]
+					++
+					Postfix
+					[Field:Int]
+						[Const:hl.types.BytesIterator_hl_UI16] this
+						[FInstance:Int]
+							hl.types.BytesIterator_hl_UI16
+							pos:Int
+			[Return:Dynamic]
+				[Call:hl.UI16]
+					[Ident:(hl.BytesAccess<hl.UI16>, Int) -> Unknown<41>] $bget
+					[Cast:hl.BytesAccess<hl.UI16>] [Local this1(3931):hl.BytesAccess<hl.UI16>:hl.BytesAccess<hl.UI16>]
+					[Local pos(3932):Int:Int]
+}

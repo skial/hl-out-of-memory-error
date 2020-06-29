@@ -1,0 +1,81 @@
+@:keep @:directlyUsed @:used
+class hl.types.ArrayDynIterator {
+
+	public function new[Function:(a : hl.types.ArrayBase) -> Void]
+		[Arg:hl.types.ArrayBase] [Local a(1678):hl.types.ArrayBase]
+		[Block:Int]
+			[Binop:hl.types.ArrayBase]
+				[Field:hl.types.ArrayBase]
+					[Const:hl.types.ArrayDynIterator] this
+					[FInstance:hl.types.ArrayBase]
+						hl.types.ArrayDynIterator
+						a:hl.types.ArrayBase
+				=
+				[Local a(1678):hl.types.ArrayBase:hl.types.ArrayBase]
+			[Binop:Int]
+				[Field:Int]
+					[Const:hl.types.ArrayDynIterator] this
+					[FInstance:Int]
+						hl.types.ArrayDynIterator
+						len:Int
+				=
+				[Field:Int]
+					[Local a(1678):hl.types.ArrayBase:hl.types.ArrayBase]
+					[FInstance:Int]
+						hl.types.ArrayBase
+						length:Int
+			[Binop:Int]
+				[Field:Int]
+					[Const:hl.types.ArrayDynIterator] this
+					[FInstance:Int]
+						hl.types.ArrayDynIterator
+						pos:Int
+				=
+				[Const:Int] 0
+
+	var a:hl.types.ArrayBase;
+
+	var len:Int;
+
+	var pos:Int;
+
+	@:maybeUsed
+	public function hasNext[Function:Void -> Bool]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Binop:Bool]
+					[Field:Int]
+						[Const:hl.types.ArrayDynIterator] this
+						[FInstance:Int]
+							hl.types.ArrayDynIterator
+							pos:Int
+					<
+					[Field:Int]
+						[Const:hl.types.ArrayDynIterator] this
+						[FInstance:Int]
+							hl.types.ArrayDynIterator
+							len:Int
+
+	@:maybeUsed
+	public function next[Function:Void -> Unknown<52>]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Call:Dynamic]
+					[Field:(pos : Int) -> Dynamic]
+						[Field:hl.types.ArrayBase]
+							[Const:hl.types.ArrayDynIterator] this
+							[FInstance:hl.types.ArrayBase]
+								hl.types.ArrayDynIterator
+								a:hl.types.ArrayBase
+						[FInstance:(pos : Int) -> Dynamic]
+							hl.types.ArrayAccess
+							getDyn:(pos : Int) -> Dynamic
+					[Unop:Int]
+						++
+						Postfix
+						[Field:Int]
+							[Const:hl.types.ArrayDynIterator] this
+							[FInstance:Int]
+								hl.types.ArrayDynIterator
+								pos:Int
+}

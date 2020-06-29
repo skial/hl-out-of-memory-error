@@ -1,0 +1,68 @@
+@:directlyUsed @:used @:keep @:generic
+class hl.types.BytesIterator<T : hl.types.BytesIterator.T> {
+
+	public function new[Function:(a : hl.types.ArrayBytes<hl.types.BytesIterator.T>) -> Void]
+		[Arg:hl.types.ArrayBytes<hl.types.BytesIterator.T>] [Local a(1371):hl.types.ArrayBytes<hl.types.BytesIterator.T>]
+		[Block:hl.types.ArrayBytes<hl.types.BytesIterator.T>]
+			[Binop:hl.types.ArrayBytes<hl.types.BytesIterator.T>]
+				[Field:hl.types.ArrayBytes<hl.types.BytesIterator.T>]
+					[Const:hl.types.BytesIterator<hl.types.BytesIterator.T>] this
+					[FInstance:hl.types.ArrayBytes<hl.types.BytesIterator.T>]
+						hl.types.BytesIterator<hl.types.BytesIterator.T>
+						a:hl.types.ArrayBytes<hl.types.BytesIterator.T>
+				=
+				[Local a(1371):hl.types.ArrayBytes<hl.types.BytesIterator.T>:hl.types.ArrayBytes<hl.types.BytesIterator.T>]
+
+	var pos:Int;
+
+	var a:hl.types.ArrayBytes<hl.types.BytesIterator.T>;
+
+	@:maybeUsed
+	public function hasNext[Function:Void -> Bool]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Binop:Bool]
+					[Field:Int]
+						[Const:hl.types.BytesIterator<hl.types.BytesIterator.T>] this
+						[FInstance:Int]
+							hl.types.BytesIterator<hl.types.BytesIterator.T>
+							pos:Int
+					<
+					[Field:Int]
+						[Field:hl.types.ArrayBytes<hl.types.BytesIterator.T>]
+							[Const:hl.types.BytesIterator<hl.types.BytesIterator.T>] this
+							[FInstance:hl.types.ArrayBytes<hl.types.BytesIterator.T>]
+								hl.types.BytesIterator<hl.types.BytesIterator.T>
+								a:hl.types.ArrayBytes<hl.types.BytesIterator.T>
+						[FInstance:Int]
+							hl.types.ArrayBase
+							length:Int
+
+	@:maybeUsed
+	public function next[Function:Void -> hl.types.BytesIterator.T]
+		[Block:Dynamic]
+			[Var this1(1374):hl.BytesAccess<hl.types.BytesIterator.T>]
+				[Field:hl.BytesAccess<hl.types.BytesIterator.T>]
+					[Field:hl.types.ArrayBytes<hl.types.BytesIterator.T>]
+						[Const:hl.types.BytesIterator<hl.types.BytesIterator.T>] this
+						[FInstance:hl.types.ArrayBytes<hl.types.BytesIterator.T>]
+							hl.types.BytesIterator<hl.types.BytesIterator.T>
+							a:hl.types.ArrayBytes<hl.types.BytesIterator.T>
+					[FInstance:hl.BytesAccess<hl.types.BytesIterator.T>]
+						hl.types.ArrayBytes<hl.types.BytesIterator.T>
+						bytes:hl.BytesAccess<hl.types.ArrayBytes.T>
+			[Var pos(1375):Int]
+				[Unop:Int]
+					++
+					Postfix
+					[Field:Int]
+						[Const:hl.types.BytesIterator<hl.types.BytesIterator.T>] this
+						[FInstance:Int]
+							hl.types.BytesIterator<hl.types.BytesIterator.T>
+							pos:Int
+			[Return:Dynamic]
+				[Call:hl.types.BytesIterator.T]
+					[Ident:(hl.BytesAccess<hl.types.BytesIterator.T>, Int) -> Unknown<41>] $bget
+					[Cast:hl.BytesAccess<hl.types.BytesIterator.T>] [Local this1(1374):hl.BytesAccess<hl.types.BytesIterator.T>:hl.BytesAccess<hl.types.BytesIterator.T>]
+					[Local pos(1375):Int:Int]
+}

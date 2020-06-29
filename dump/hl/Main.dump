@@ -1,0 +1,19 @@
+@:used
+class Main {
+
+	@:keep
+	public static function main[Function:Void -> Void]
+		[Block:Void]
+			[Call:Void]
+				[Field:Void -> Void]
+					[New:Test1] Test1
+					[FInstance:Void -> Void]
+						Test1
+						test:Void -> Void
+			[Call:Void]
+				[Field:Void -> Void]
+					[New:Test2] Test2
+					[FInstance:Void -> Void]
+						Test2
+						test:Void -> Void
+}

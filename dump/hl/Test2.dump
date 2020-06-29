@@ -1,0 +1,7 @@
+@:directlyUsed @:used
+class Test2 {
+
+	public function new[Function:Void -> Void] [Block:Void]
+
+	public function test[Function:Void -> Void] [Block:Void] [Var _foo(3841):_Test2.Foo] [New:_Test2.FooLike] _Test2.FooLike
+}

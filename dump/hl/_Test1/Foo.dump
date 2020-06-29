@@ -1,0 +1,1 @@
+private typedef _Test1.Foo = { make : (v : make.T) -> _Test1.Foo }

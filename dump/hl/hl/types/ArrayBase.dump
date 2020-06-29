@@ -1,0 +1,218 @@
+@:directlyUsed @:used @:keep
+class hl.types.ArrayBase extends hl.types.ArrayAccess {
+
+	public var length(default,null):Int;
+
+	public function pushDyn[Function:(v : Dynamic) -> Int]
+		[Arg:Dynamic] [Local v(1195):Dynamic]
+		[Block:Unknown<23>] [Throw:Unknown<23>] [Const:String] "Not implemented"
+
+	public function popDyn[Function:Void -> Null<Dynamic>] [Block:Unknown<24>] [Throw:Unknown<24>] [Const:String] "Not implemented"
+
+	public function shiftDyn[Function:Void -> Null<Dynamic>] [Block:Unknown<25>] [Throw:Unknown<25>] [Const:String] "Not implemented"
+
+	public function unshiftDyn[Function:(v : Dynamic) -> Void]
+		[Arg:Dynamic] [Local v(1197):Dynamic]
+		[Block:Unknown<26>] [Throw:Unknown<26>] [Const:String] "Not implemented"
+
+	public function insertDyn[Function:(pos : Int, v : Dynamic) -> Void]
+		[Arg:Int] [Local pos(1200):Int]
+		[Arg:Dynamic] [Local v(1201):Dynamic]
+		[Block:Unknown<27>] [Throw:Unknown<27>] [Const:String] "Not implemented"
+
+	public function removeDyn[Function:(v : Dynamic) -> Bool]
+		[Arg:Dynamic] [Local v(1203):Dynamic]
+		[Block:Unknown<28>] [Throw:Unknown<28>] [Const:String] "Not implemented"
+
+	public function sortDyn[Function:(f : ((Dynamic, Dynamic) -> Int)) -> Void]
+		[Arg:(Dynamic, Dynamic) -> Int] [Local f(1205):(Dynamic, Dynamic) -> Int]
+		[Block:Unknown<29>] [Throw:Unknown<29>] [Const:String] "Not implemented"
+
+	public function slice[Function:(pos : Int, ?end : Null<Int>) -> hl.types.ArrayBase]
+		[Arg:Int] [Local pos(955):Int]
+		[Arg:Null<Int>]
+			[Local end(956):Null<Int>]
+			[Const:Null<Int>] null
+		[Block:Unknown<30>] [Throw:Unknown<30>] [Const:String] "Not implemented"
+
+	public function splice[Function:(pos : Int, len : Int) -> hl.types.ArrayBase]
+		[Arg:Int] [Local pos(1061):Int]
+		[Arg:Int] [Local len(1062):Int]
+		[Block:Unknown<31>] [Throw:Unknown<31>] [Const:String] "Not implemented"
+
+	public function join[Function:(sep : String) -> String]
+		[Arg:String] [Local sep(825):String]
+		[Block:Unknown<32>] [Throw:Unknown<32>] [Const:String] "Not implemented"
+
+	public function reverse[Function:Void -> Void] [Block:Unknown<33>] [Throw:Unknown<33>] [Const:String] "Not implemented"
+
+	public function resize[Function:(len : Int) -> Void]
+		[Arg:Int] [Local len(1176):Int]
+		[Block:Unknown<34>] [Throw:Unknown<34>] [Const:String] "Not implemented"
+
+	public function toString[Function:Void -> String] [Block:Unknown<35>] [Throw:Unknown<35>] [Const:String] "Not implemented"
+
+	function __cast[Function:(t : hl.Type) -> Dynamic]
+		[Arg:hl.Type] [Local t(1364):hl.Type]
+		[Block:Dynamic]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local t(1364):hl.Type:hl.Type]
+						==
+						[Call:hl.Type]
+							[Ident:hl.types.ArrayDyn -> Unknown<3>] $ttype
+							[Cast:hl.types.ArrayDyn] [Const:hl.types.ArrayDyn] null
+				[Then:Dynamic] [Return:Dynamic]
+					[Call:hl.types.ArrayDyn]
+						[Field:(a : hl.types.ArrayBase, ?allowReinterpret : Bool) -> hl.types.ArrayDyn]
+							[TypeExpr hl.types.ArrayDyn:Class<hl.types.ArrayDyn>]
+							[FStatic:(a : hl.types.ArrayBase, ?allowReinterpret : Bool) -> hl.types.ArrayDyn]
+								hl.types.ArrayDyn
+								alloc:(a : hl.types.ArrayBase, ?allowReinterpret : Bool) -> hl.types.ArrayDyn
+						[Const:hl.types.ArrayBase] this
+						[Const:Bool] false
+			[Return:Dynamic] [Const:Unknown<36>] null
+
+	function isArrayObj[Function:Void -> Bool] [Block:Dynamic] [Return:Dynamic] [Const:Bool] false
+
+	@:has_untyped
+	public static function allocI32[Function:(bytes : hl.BytesAccess<Int>, length : Int) -> hl.types.ArrayI32]
+		[Arg:hl.BytesAccess<Int>] [Local bytes(1368):hl.BytesAccess<Int>]
+		[Arg:Int] [Local length(1369):Int]
+		[Block:Dynamic]
+			[Var a(1370):hl.types.ArrayI32]
+				[Call:hl.types.ArrayI32]
+					[Ident:Class<hl.types.ArrayBytes_Int> -> Unknown<37>] $new
+					[TypeExpr hl.types.ArrayBytes_Int:Class<hl.types.ArrayBytes_Int>]
+			[Binop:Int]
+				[Field:Int]
+					[Local a(1370):hl.types.ArrayI32:hl.types.ArrayI32]
+					[FInstance:Int]
+						hl.types.ArrayBase
+						length:Int
+				=
+				[Local length(1369):Int:Int]
+			[Binop:hl.BytesAccess<Int>]
+				[Field:hl.BytesAccess<Int>]
+					[Local a(1370):hl.types.ArrayI32:hl.types.ArrayI32]
+					[FInstance:hl.BytesAccess<Int>]
+						hl.types.ArrayBytes_Int
+						bytes:hl.BytesAccess<Int>
+				=
+				[Local bytes(1368):hl.BytesAccess<Int>:hl.BytesAccess<Int>]
+			[Binop:Int]
+				[Field:Int]
+					[Local a(1370):hl.types.ArrayI32:hl.types.ArrayI32]
+					[FInstance:Int]
+						hl.types.ArrayBytes_Int
+						size:Int
+				=
+				[Local length(1369):Int:Int]
+			[Return:Dynamic] [Local a(1370):hl.types.ArrayI32:hl.types.ArrayI32]
+
+	@:has_untyped
+	public static function allocUI16[Function:(bytes : hl.BytesAccess<hl.UI16>, length : Int) -> hl.types.ArrayUI16]
+		[Arg:hl.BytesAccess<hl.UI16>] [Local bytes(1669):hl.BytesAccess<hl.UI16>]
+		[Arg:Int] [Local length(1670):Int]
+		[Block:Dynamic]
+			[Var a(1671):hl.types.ArrayUI16]
+				[Call:hl.types.ArrayUI16]
+					[Ident:Class<hl.types.ArrayBytes_hl_UI16> -> Unknown<38>] $new
+					[TypeExpr hl.types.ArrayBytes_hl_UI16:Class<hl.types.ArrayBytes_hl_UI16>]
+			[Binop:Int]
+				[Field:Int]
+					[Local a(1671):hl.types.ArrayUI16:hl.types.ArrayUI16]
+					[FInstance:Int]
+						hl.types.ArrayBase
+						length:Int
+				=
+				[Local length(1670):Int:Int]
+			[Binop:hl.BytesAccess<hl.UI16>]
+				[Field:hl.BytesAccess<hl.UI16>]
+					[Local a(1671):hl.types.ArrayUI16:hl.types.ArrayUI16]
+					[FInstance:hl.BytesAccess<hl.UI16>]
+						hl.types.ArrayBytes_hl_UI16
+						bytes:hl.BytesAccess<hl.UI16>
+				=
+				[Local bytes(1669):hl.BytesAccess<hl.UI16>:hl.BytesAccess<hl.UI16>]
+			[Binop:Int]
+				[Field:Int]
+					[Local a(1671):hl.types.ArrayUI16:hl.types.ArrayUI16]
+					[FInstance:Int]
+						hl.types.ArrayBytes_hl_UI16
+						size:Int
+				=
+				[Local length(1670):Int:Int]
+			[Return:Dynamic] [Local a(1671):hl.types.ArrayUI16:hl.types.ArrayUI16]
+
+	@:has_untyped
+	public static function allocF32[Function:(bytes : hl.BytesAccess<hl.F32>, length : Int) -> hl.types.ArrayF32]
+		[Arg:hl.BytesAccess<hl.F32>] [Local bytes(1672):hl.BytesAccess<hl.F32>]
+		[Arg:Int] [Local length(1673):Int]
+		[Block:Dynamic]
+			[Var a(1674):hl.types.ArrayF32]
+				[Call:hl.types.ArrayF32]
+					[Ident:Class<hl.types.ArrayBytes_Single> -> Unknown<39>] $new
+					[TypeExpr hl.types.ArrayBytes_Single:Class<hl.types.ArrayBytes_Single>]
+			[Binop:Int]
+				[Field:Int]
+					[Local a(1674):hl.types.ArrayF32:hl.types.ArrayF32]
+					[FInstance:Int]
+						hl.types.ArrayBase
+						length:Int
+				=
+				[Local length(1673):Int:Int]
+			[Binop:hl.BytesAccess<hl.F32>]
+				[Field:hl.BytesAccess<hl.F32>]
+					[Local a(1674):hl.types.ArrayF32:hl.types.ArrayF32]
+					[FInstance:hl.BytesAccess<hl.F32>]
+						hl.types.ArrayBytes_Single
+						bytes:hl.BytesAccess<hl.F32>
+				=
+				[Local bytes(1672):hl.BytesAccess<hl.F32>:hl.BytesAccess<hl.F32>]
+			[Binop:Int]
+				[Field:Int]
+					[Local a(1674):hl.types.ArrayF32:hl.types.ArrayF32]
+					[FInstance:Int]
+						hl.types.ArrayBytes_Single
+						size:Int
+				=
+				[Local length(1673):Int:Int]
+			[Return:Dynamic] [Local a(1674):hl.types.ArrayF32:hl.types.ArrayF32]
+
+	@:has_untyped
+	public static function allocF64[Function:(bytes : hl.BytesAccess<Float>, length : Int) -> hl.types.ArrayF64]
+		[Arg:hl.BytesAccess<Float>] [Local bytes(1675):hl.BytesAccess<Float>]
+		[Arg:Int] [Local length(1676):Int]
+		[Block:Dynamic]
+			[Var a(1677):hl.types.ArrayF64]
+				[Call:hl.types.ArrayF64]
+					[Ident:Class<hl.types.ArrayBytes_Float> -> Unknown<40>] $new
+					[TypeExpr hl.types.ArrayBytes_Float:Class<hl.types.ArrayBytes_Float>]
+			[Binop:Int]
+				[Field:Int]
+					[Local a(1677):hl.types.ArrayF64:hl.types.ArrayF64]
+					[FInstance:Int]
+						hl.types.ArrayBase
+						length:Int
+				=
+				[Local length(1676):Int:Int]
+			[Binop:hl.BytesAccess<Float>]
+				[Field:hl.BytesAccess<Float>]
+					[Local a(1677):hl.types.ArrayF64:hl.types.ArrayF64]
+					[FInstance:hl.BytesAccess<Float>]
+						hl.types.ArrayBytes_Float
+						bytes:hl.BytesAccess<Float>
+				=
+				[Local bytes(1675):hl.BytesAccess<Float>:hl.BytesAccess<Float>]
+			[Binop:Int]
+				[Field:Int]
+					[Local a(1677):hl.types.ArrayF64:hl.types.ArrayF64]
+					[FInstance:Int]
+						hl.types.ArrayBytes_Float
+						size:Int
+				=
+				[Local length(1676):Int:Int]
+			[Return:Dynamic] [Local a(1677):hl.types.ArrayF64:hl.types.ArrayF64]
+}
