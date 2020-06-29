@@ -1,2 +1,2 @@
-extern interface ArrayAccess<T : ArrayAccess.T> {
+extern interface ArrayAccess<T> {
 }

@@ -1,2 +1,2 @@
 @:coreType @:runtimeValue
-abstract Dynamic<T : Dynamic.T> {}
+abstract Dynamic<T> {}

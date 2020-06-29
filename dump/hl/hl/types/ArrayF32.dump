@@ -1,1 +1,1 @@
-typedef hl.types.ArrayF32 = hl.types.ArrayBytes_Single
+typedef hl.types.ArrayF32 = hl.types.ArrayBytes_hl_F32

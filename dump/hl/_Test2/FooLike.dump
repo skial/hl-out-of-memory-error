@@ -1,10 +1,10 @@
 @:directlyUsed @:used
 private class _Test2.FooLike {
 
-	public function new[Function:Void -> Void] [Block:Void]
+	public function new[Function:() -> Void] [Block:Void]
 
 	@:maybeUsed
-	public function make<T : make.T>[Function:(v : make.T) -> _Test2.FooLike]
-		[Arg:make.T] [Local v(3840):make.T]
+	public function make<T>[Function:(v : make.T) -> _Test2.FooLike]
+		[Arg:make.T] [Local v(4132):make.T]
 		[Block:Dynamic] [Return:Dynamic] [Const:_Test2.FooLike] this
 }

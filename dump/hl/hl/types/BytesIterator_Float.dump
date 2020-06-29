@@ -1,9 +1,12 @@
 @:directlyUsed @:used @:keep @:noDoc
-class hl.types.BytesIterator_Float {
+class hl.types.BytesIterator_Float extends haxe.iterators.ArrayIterator<Float> {
 
 	public function new[Function:(a : hl.types.ArrayBytes_Float) -> Void]
-		[Arg:hl.types.ArrayBytes_Float] [Local a(4215):hl.types.ArrayBytes_Float]
+		[Arg:hl.types.ArrayBytes_Float] [Local a(4719):hl.types.ArrayBytes_Float]
 		[Block:hl.types.ArrayBytes_Float]
+			[Call:Void]
+				[Const:haxe.iterators.ArrayIterator<Float>] super
+				[Cast:Dynamic] [Const:Unknown<47>] null
 			[Binop:hl.types.ArrayBytes_Float]
 				[Field:hl.types.ArrayBytes_Float]
 					[Const:hl.types.BytesIterator_Float] this
@@ -11,22 +14,19 @@ class hl.types.BytesIterator_Float {
 						hl.types.BytesIterator_Float
 						a:hl.types.ArrayBytes_Float
 				=
-				[Local a(4215):hl.types.ArrayBytes_Float:hl.types.ArrayBytes_Float]
-
-	var pos:Int;
+				[Local a(4719):hl.types.ArrayBytes_Float:hl.types.ArrayBytes_Float]
 
 	var a:hl.types.ArrayBytes_Float;
 
-	@:maybeUsed
-	public function hasNext[Function:Void -> Bool]
+	public function hasNext[Function:() -> Bool]
 		[Block:Dynamic]
 			[Return:Dynamic]
 				[Binop:Bool]
 					[Field:Int]
 						[Const:hl.types.BytesIterator_Float] this
 						[FInstance:Int]
-							hl.types.BytesIterator_Float
-							pos:Int
+							haxe.iterators.ArrayIterator<Float>
+							current:Int
 					<
 					[Field:Int]
 						[Field:hl.types.ArrayBytes_Float]
@@ -38,10 +38,9 @@ class hl.types.BytesIterator_Float {
 							hl.types.ArrayBase
 							length:Int
 
-	@:maybeUsed
-	public function next[Function:Void -> Float]
+	public function next[Function:() -> Float]
 		[Block:Dynamic]
-			[Var this1(4213):hl.BytesAccess<Float>]
+			[Var this1(4717):hl.BytesAccess<Float>]
 				[Field:hl.BytesAccess<Float>]
 					[Field:hl.types.ArrayBytes_Float]
 						[Const:hl.types.BytesIterator_Float] this
@@ -51,18 +50,18 @@ class hl.types.BytesIterator_Float {
 					[FInstance:hl.BytesAccess<Float>]
 						hl.types.ArrayBytes_Float
 						bytes:hl.BytesAccess<Float>
-			[Var pos(4214):Int]
+			[Var pos(4718):Int]
 				[Unop:Int]
 					++
 					Postfix
 					[Field:Int]
 						[Const:hl.types.BytesIterator_Float] this
 						[FInstance:Int]
-							hl.types.BytesIterator_Float
-							pos:Int
+							haxe.iterators.ArrayIterator<Float>
+							current:Int
 			[Return:Dynamic]
 				[Call:Float]
-					[Ident:(hl.BytesAccess<Float>, Int) -> Unknown<41>] $bget
-					[Cast:hl.BytesAccess<Float>] [Local this1(4213):hl.BytesAccess<Float>:hl.BytesAccess<Float>]
-					[Local pos(4214):Int:Int]
+					[Ident:(hl.BytesAccess<Float>, Int) -> Unknown<48>] $bget
+					[Local this1(4717):hl.BytesAccess<Float>:hl.BytesAccess<Float>]
+					[Local pos(4718):Int:Int]
 }

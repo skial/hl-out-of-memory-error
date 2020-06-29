@@ -1,2 +1,2 @@
 @:coreType @:runtimeValue
-abstract Enum<T : Enum.T> {}
+abstract Enum<T> {}

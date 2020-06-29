@@ -2,18 +2,18 @@
 class Main {
 
 	@:keep
-	public static function main[Function:Void -> Void]
+	public static function main[Function:() -> Void]
 		[Block:Void]
 			[Call:Void]
-				[Field:Void -> Void]
+				[Field:() -> Void]
 					[New:Test1] Test1
-					[FInstance:Void -> Void]
+					[FInstance:() -> Void]
 						Test1
-						test:Void -> Void
+						test:() -> Void
 			[Call:Void]
-				[Field:Void -> Void]
+				[Field:() -> Void]
 					[New:Test2] Test2
-					[FInstance:Void -> Void]
+					[FInstance:() -> Void]
 						Test2
-						test:Void -> Void
+						test:() -> Void
 }

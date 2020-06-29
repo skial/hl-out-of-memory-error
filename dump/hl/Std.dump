@@ -7,72 +7,156 @@ class Std {
 	static var toStringDepth:Int = [Const:Int] 0;
 
 	@:hlNative("std", "rnd_init_system")
-	static function rnd_sys[Function:Void -> _Std.Rand] [Block:Dynamic] [Return:Dynamic] [Const:_Std.Rand] null
+	static function rnd_sys[Function:() -> _Std.Rand] [Block:Dynamic] [Return:Dynamic] [Const:_Std.Rand] null
+
+	public static function isOfType[Function:(v : Dynamic, t : Dynamic) -> Bool]
+		[Arg:Dynamic] [Local v(198):Dynamic]
+		[Arg:Dynamic] [Local t(199):Dynamic]
+		[Block:Dynamic]
+			[Var t(200):hl.BaseType] [Local t(199):Dynamic:Dynamic]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local t(200):hl.BaseType:hl.BaseType]
+						==
+						[Const:hl.BaseType] null
+				[Then:Dynamic] [Return:Dynamic] [Const:Bool] false
+			[Block:Void]
+				[Var this1(230):hl.Type]
+					[Field:hl.Type]
+						[Local t(200):hl.BaseType:hl.BaseType]
+						[FInstance:hl.Type]
+							hl.BaseType
+							__type__:hl.Type
+				[Switch:Void]
+					[Parenthesis:hl.TypeKind]
+						[Call:hl.TypeKind]
+							[Ident:hl.Type -> Unknown<2>] $tkind
+							[Local this1(230):hl.Type:hl.Type]
+					[Case:Void]
+						[Const:Int] 3
+						[Block:Void]
+							[Var this1(232):hl.Type]
+								[Call:hl.Type]
+									[Ident:Dynamic -> Unknown<0>] $tdyntype
+									[Local v(198):Dynamic:Dynamic]
+							[Switch:Void]
+								[Parenthesis:hl.TypeKind]
+									[Call:hl.TypeKind]
+										[Ident:hl.Type -> Unknown<2>] $tkind
+										[Local this1(232):hl.Type:hl.Type]
+								[Case:Dynamic]
+									[Const:Int] 5
+									[Const:Int] 6
+									[Block:Dynamic]
+										[Var v(233):Float] [Local v(198):Dynamic:Dynamic]
+										[Return:Dynamic]
+											[Binop:Bool]
+												[Call:Int]
+													[Ident:Float -> Unknown<1>] $int
+													[Local v(233):Float:Float]
+												==
+												[Local v(233):Float:Float]
+								[Default:Void] [Block:Void]
+					[Case:Void]
+						[Const:Int] 6
+						[Block:Void]
+							[Var this1(235):hl.Type]
+								[Call:hl.Type]
+									[Ident:Dynamic -> Unknown<0>] $tdyntype
+									[Local v(198):Dynamic:Dynamic]
+							[Switch:Void]
+								[Parenthesis:hl.TypeKind]
+									[Call:hl.TypeKind]
+										[Ident:hl.Type -> Unknown<2>] $tkind
+										[Local this1(235):hl.Type:hl.Type]
+								[Case:Dynamic]
+									[Const:Int] 1
+									[Const:Int] 2
+									[Const:Int] 3
+									[Return:Dynamic] [Const:Bool] true
+								[Default:Void] [Block:Void]
+					[Case:Dynamic]
+						[Const:Int] 9
+						[Return:Dynamic]
+							[Binop:Bool]
+								[Local v(198):Dynamic:Dynamic]
+								!=
+								[Const:Unknown<3>] null
+					[Default:Void] [Block:Void]
+			[Return:Dynamic]
+				[Call:Bool]
+					[Field:(v : Dynamic) -> Bool]
+						[Local t(200):hl.BaseType:hl.BaseType]
+						[FInstance:(v : Dynamic) -> Bool]
+							hl.BaseType
+							check:(v : Dynamic) -> Bool
+					[Local v(198):Dynamic:Dynamic]
 
 	@:keep
 	public static function string[Function:(s : Dynamic) -> String]
-		[Arg:Dynamic] [Local s(220):Dynamic]
+		[Arg:Dynamic] [Local s(288):Dynamic]
 		[Block:Dynamic]
-			[Var len(221):Int] [Const:Int] 0
-			[Var this1(229):hl.Ref<Int>]
+			[Var len(289):Int] [Const:Int] 0
+			[Var this1(295):hl.Ref<Int>]
 				[Call:hl.Ref<Int>]
-					[Ident:Int -> Unknown<0>] $ref
-					[Local len(221):Int:Int]
-			[Var bytes(230):hl.Bytes]
+					[Ident:Int -> Unknown<4>] $ref
+					[Local len(289):Int:Int]
+			[Var bytes(296):hl.Bytes]
 				[Call:hl.Bytes]
 					[Field:(v : Dynamic, length : hl.Ref<Int>) -> hl.Bytes]
-						[TypeExpr hl._Bytes.Bytes_Impl_:Class<hl._Bytes.Bytes_Impl_>]
+						[TypeExpr hl._Bytes.Bytes_Impl_:Abstract<hl.Bytes>]
 						[FStatic:(v : Dynamic, length : hl.Ref<Int>) -> hl.Bytes]
 							hl._Bytes.Bytes_Impl_
 							fromValue:(v : Dynamic, length : hl.Ref<Int>) -> hl.Bytes
-					[Local s(220):Dynamic:Dynamic]
-					[Cast:hl.Ref<Int>] [Local this1(229):hl.Ref<Int>:hl.Ref<Int>]
-			[Var s1(235):String]
+					[Local s(288):Dynamic:Dynamic]
+					[Local this1(295):hl.Ref<Int>:hl.Ref<Int>]
+			[Var s(301):String]
 				[Call:String]
-					[Ident:Class<String> -> Unknown<1>] $new
+					[Ident:Class<String> -> Unknown<5>] $new
 					[TypeExpr String:Class<String>]
 			[Binop:hl.Bytes]
 				[Field:hl.Bytes]
-					[Local s1(235):String:String]
+					[Local s(301):String:String]
 					[FInstance:hl.Bytes]
 						String
 						bytes:hl.Bytes
 				=
-				[Local bytes(230):hl.Bytes:hl.Bytes]
+				[Local bytes(296):hl.Bytes:hl.Bytes]
 			[Binop:Int]
 				[Field:Int]
-					[Local s1(235):String:String]
+					[Local s(301):String:String]
 					[FInstance:Int]
 						String
 						length:Int
 				=
-				[Local len(221):Int:Int]
-			[Return:Dynamic] [Local s1(235):String:String]
+				[Local len(289):Int:Int]
+			[Return:Dynamic] [Local s(301):String:String]
 
 	@:keep
 	static function __add__[Function:(a : Dynamic, b : Dynamic) -> Dynamic]
-		[Arg:Dynamic] [Local a(3795):Dynamic]
-		[Arg:Dynamic] [Local b(3796):Dynamic]
+		[Arg:Dynamic] [Local a(4087):Dynamic]
+		[Arg:Dynamic] [Local b(4088):Dynamic]
 		[Block:Dynamic]
-			[Var ta(3800):hl.Type]
+			[Var ta(4092):hl.Type]
 				[Call:hl.Type]
-					[Ident:Dynamic -> Unknown<2>] $tdyntype
-					[Local a(3795):Dynamic:Dynamic]
-			[Var tb(3804):hl.Type]
+					[Ident:Dynamic -> Unknown<0>] $tdyntype
+					[Local a(4087):Dynamic:Dynamic]
+			[Var tb(4096):hl.Type]
 				[Call:hl.Type]
-					[Ident:Dynamic -> Unknown<2>] $tdyntype
-					[Local b(3796):Dynamic:Dynamic]
+					[Ident:Dynamic -> Unknown<0>] $tdyntype
+					[Local b(4088):Dynamic:Dynamic]
 			[If:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
-						[Local ta(3800):hl.Type:hl.Type]
+						[Local ta(4092):hl.Type:hl.Type]
 						==
 						[Call:hl.Type]
-							[Ident:String -> Unknown<3>] $ttype
+							[Ident:String -> Unknown<6>] $ttype
 							[Const:String] ""
 				[Then:Dynamic] [Return:Dynamic]
 					[Binop:String]
-						[Cast:String] [Local a(3795):Dynamic:Dynamic]
+						[Cast:String] [Local a(4087):Dynamic:Dynamic]
 						+
 						[Call:String]
 							[Field:(s : Dynamic) -> String]
@@ -80,14 +164,14 @@ class Std {
 								[FStatic:(s : Dynamic) -> String]
 									Std
 									string:(s : Dynamic) -> String
-							[Local b(3796):Dynamic:Dynamic]
+							[Local b(4088):Dynamic:Dynamic]
 			[If:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
-						[Local tb(3804):hl.Type:hl.Type]
+						[Local tb(4096):hl.Type:hl.Type]
 						==
 						[Call:hl.Type]
-							[Ident:String -> Unknown<3>] $ttype
+							[Ident:String -> Unknown<6>] $ttype
 							[Const:String] ""
 				[Then:Dynamic] [Return:Dynamic]
 					[Binop:String]
@@ -97,21 +181,21 @@ class Std {
 								[FStatic:(s : Dynamic) -> String]
 									Std
 									string:(s : Dynamic) -> String
-							[Local a(3795):Dynamic:Dynamic]
+							[Local a(4087):Dynamic:Dynamic]
 						+
-						[Cast:String] [Local b(3796):Dynamic:Dynamic]
+						[Cast:String] [Local b(4088):Dynamic:Dynamic]
 			[Switch:Void]
 				[Parenthesis:hl.TypeKind]
 					[Call:hl.TypeKind]
-						[Ident:hl.Type -> Unknown<4>] $tkind
-						[Cast:hl.Type] [Local ta(3800):hl.Type:hl.Type]
+						[Ident:hl.Type -> Unknown<2>] $tkind
+						[Local ta(4092):hl.Type:hl.Type]
 				[Case:Void]
 					[Const:Int] 0
 					[Switch:Void]
 						[Parenthesis:hl.TypeKind]
 							[Call:hl.TypeKind]
-								[Ident:hl.Type -> Unknown<4>] $tkind
-								[Cast:hl.Type] [Local tb(3804):hl.Type:hl.Type]
+								[Ident:hl.Type -> Unknown<2>] $tkind
+								[Local tb(4096):hl.Type:hl.Type]
 						[Case:Dynamic]
 							[Const:Int] 0
 							[Return:Dynamic] [Const:Float] 0.
@@ -121,74 +205,79 @@ class Std {
 							[Const:Int] 3
 							[Const:Int] 5
 							[Const:Int] 6
-							[Return:Dynamic] [Local b(3796):Dynamic:Dynamic]
+							[Return:Dynamic] [Local b(4088):Dynamic:Dynamic]
 						[Default:Void] [Block:Void]
 				[Case:Void]
 					[Const:Int] 1
 					[Const:Int] 2
 					[Const:Int] 3
 					[Block:Void]
-						[Var a1(3834):Int] [Local a(3795):Dynamic:Dynamic]
+						[Var a(4126):Int] [Local a(4087):Dynamic:Dynamic]
 						[Switch:Void]
 							[Parenthesis:hl.TypeKind]
 								[Call:hl.TypeKind]
-									[Ident:hl.Type -> Unknown<4>] $tkind
-									[Cast:hl.Type] [Local tb(3804):hl.Type:hl.Type]
+									[Ident:hl.Type -> Unknown<2>] $tkind
+									[Local tb(4096):hl.Type:hl.Type]
 							[Case:Dynamic]
 								[Const:Int] 0
-								[Return:Dynamic] [Local a1(3834):Int:Int]
+								[Return:Dynamic] [Local a(4126):Int:Int]
 							[Case:Dynamic]
 								[Const:Int] 1
 								[Const:Int] 2
 								[Const:Int] 3
 								[Return:Dynamic]
 									[Binop:Int]
-										[Local a1(3834):Int:Int]
+										[Local a(4126):Int:Int]
 										+
-										[Cast:Int] [Local b(3796):Dynamic:Dynamic]
+										[Cast:Int] [Local b(4088):Dynamic:Dynamic]
 							[Case:Dynamic]
 								[Const:Int] 5
 								[Const:Int] 6
 								[Return:Dynamic]
 									[Binop:Float]
-										[Local a1(3834):Int:Int]
+										[Local a(4126):Int:Int]
 										+
-										[Cast:Float] [Local b(3796):Dynamic:Dynamic]
+										[Cast:Float] [Local b(4088):Dynamic:Dynamic]
 							[Default:Void] [Block:Void]
 				[Case:Void]
 					[Const:Int] 5
 					[Const:Int] 6
 					[Block:Void]
-						[Var a2(3836):Float] [Local a(3795):Dynamic:Dynamic]
+						[Var a(4128):Float] [Local a(4087):Dynamic:Dynamic]
 						[Switch:Void]
 							[Parenthesis:hl.TypeKind]
 								[Call:hl.TypeKind]
-									[Ident:hl.Type -> Unknown<4>] $tkind
-									[Cast:hl.Type] [Local tb(3804):hl.Type:hl.Type]
+									[Ident:hl.Type -> Unknown<2>] $tkind
+									[Local tb(4096):hl.Type:hl.Type]
 							[Case:Dynamic]
 								[Const:Int] 0
-								[Return:Dynamic] [Local a2(3836):Float:Float]
+								[Return:Dynamic] [Local a(4128):Float:Float]
 							[Case:Dynamic]
 								[Const:Int] 1
 								[Const:Int] 2
 								[Const:Int] 3
 								[Return:Dynamic]
 									[Binop:Float]
-										[Local a2(3836):Float:Float]
+										[Local a(4128):Float:Float]
 										+
-										[Cast:Int] [Local b(3796):Dynamic:Dynamic]
+										[Cast:Int] [Local b(4088):Dynamic:Dynamic]
 							[Case:Dynamic]
 								[Const:Int] 5
 								[Const:Int] 6
 								[Return:Dynamic]
 									[Binop:Float]
-										[Local a2(3836):Float:Float]
+										[Local a(4128):Float:Float]
 										+
-										[Cast:Float] [Local b(3796):Dynamic:Dynamic]
+										[Cast:Float] [Local b(4088):Dynamic:Dynamic]
 							[Default:Void] [Block:Void]
 				[Default:Void] [Block:Void]
-			[Throw:Unknown<5>]
-				[Binop:String]
+			[Throw:Unknown<7>]
+				[Call:Any]
+					[Field:(value : Any) -> Any]
+						[TypeExpr haxe.Exception:{ Statics haxe.Exception }]
+						[FStatic:(value : Any) -> Any]
+							haxe.Exception
+							thrown:(value : Any) -> Any
 					[Binop:String]
 						[Binop:String]
 							[Binop:String]
@@ -196,47 +285,48 @@ class Std {
 									[Binop:String]
 										[Binop:String]
 											[Binop:String]
-												[Const:String] "Can't add "
+												[Binop:String]
+													[Const:String] "Can't add "
+													+
+													[Call:String]
+														[Field:(s : Dynamic) -> String]
+															[TypeExpr Std:Class<Std>]
+															[FStatic:(s : Dynamic) -> String]
+																Std
+																string:(s : Dynamic) -> String
+														[Local a(4087):Dynamic:Dynamic]
 												+
-												[Call:String]
-													[Field:(s : Dynamic) -> String]
-														[TypeExpr Std:Class<Std>]
-														[FStatic:(s : Dynamic) -> String]
-															Std
-															string:(s : Dynamic) -> String
-													[Local a(3795):Dynamic:Dynamic]
+												[Const:String] "("
 											+
-											[Const:String] "("
+											[Call:String]
+												[Field:(s : Dynamic) -> String]
+													[TypeExpr Std:Class<Std>]
+													[FStatic:(s : Dynamic) -> String]
+														Std
+														string:(s : Dynamic) -> String
+												[Local ta(4092):hl.Type:hl.Type]
 										+
-										[Call:String]
-											[Field:(s : Dynamic) -> String]
-												[TypeExpr Std:Class<Std>]
-												[FStatic:(s : Dynamic) -> String]
-													Std
-													string:(s : Dynamic) -> String
-											[Local ta(3800):hl.Type:hl.Type]
+										[Const:String] ") and "
 									+
-									[Const:String] ") and "
+									[Call:String]
+										[Field:(s : Dynamic) -> String]
+											[TypeExpr Std:Class<Std>]
+											[FStatic:(s : Dynamic) -> String]
+												Std
+												string:(s : Dynamic) -> String
+										[Local b(4088):Dynamic:Dynamic]
 								+
-								[Call:String]
-									[Field:(s : Dynamic) -> String]
-										[TypeExpr Std:Class<Std>]
-										[FStatic:(s : Dynamic) -> String]
-											Std
-											string:(s : Dynamic) -> String
-									[Local b(3796):Dynamic:Dynamic]
+								[Const:String] "("
 							+
-							[Const:String] "("
+							[Call:String]
+								[Field:(s : Dynamic) -> String]
+									[TypeExpr Std:Class<Std>]
+									[FStatic:(s : Dynamic) -> String]
+										Std
+										string:(s : Dynamic) -> String
+								[Local tb(4096):hl.Type:hl.Type]
 						+
-						[Call:String]
-							[Field:(s : Dynamic) -> String]
-								[TypeExpr Std:Class<Std>]
-								[FStatic:(s : Dynamic) -> String]
-									Std
-									string:(s : Dynamic) -> String
-							[Local tb(3804):hl.Type:hl.Type]
-					+
-					[Const:String] ")"
+						[Const:String] ")"
 
 	static function __init__() [Binop:_Std.Rand]
 		[Field:_Std.Rand]
@@ -246,9 +336,9 @@ class Std {
 				rnd:_Std.Rand
 		=
 		[Call:_Std.Rand]
-			[Field:Void -> _Std.Rand]
+			[Field:() -> _Std.Rand]
 				[TypeExpr Std:Class<Std>]
-				[FStatic:Void -> _Std.Rand]
+				[FStatic:() -> _Std.Rand]
 					Std
-					rnd_sys:Void -> _Std.Rand
+					rnd_sys:() -> _Std.Rand
 }

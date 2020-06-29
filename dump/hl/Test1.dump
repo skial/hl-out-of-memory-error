@@ -1,7 +1,7 @@
 @:directlyUsed @:used
 class Test1 {
 
-	public function new[Function:Void -> Void] [Block:Void]
+	public function new[Function:() -> Void] [Block:Void]
 
-	public function test[Function:Void -> Void] [Block:Void] [Var _foo(3839):_Test1.Foo] [New:_Test1.FooLike] _Test1.FooLike
+	public function test[Function:() -> Void] [Block:Void] [Var _foo(4131):_Test1.Foo] [New:_Test1.FooLike] _Test1.FooLike
 }

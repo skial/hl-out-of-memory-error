@@ -1,2 +1,2 @@
 @:used @:semantics(reference) @:coreType
-abstract hl.Ref<T : hl.Ref.T> {}
+abstract hl.Ref<T> {}

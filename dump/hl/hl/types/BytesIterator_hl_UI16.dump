@@ -1,9 +1,12 @@
 @:directlyUsed @:used @:keep @:noDoc
-class hl.types.BytesIterator_hl_UI16 {
+class hl.types.BytesIterator_hl_UI16 extends haxe.iterators.ArrayIterator<hl.UI16> {
 
 	public function new[Function:(a : hl.types.ArrayBytes_hl_UI16) -> Void]
-		[Arg:hl.types.ArrayBytes_hl_UI16] [Local a(3933):hl.types.ArrayBytes_hl_UI16]
+		[Arg:hl.types.ArrayBytes_hl_UI16] [Local a(4421):hl.types.ArrayBytes_hl_UI16]
 		[Block:hl.types.ArrayBytes_hl_UI16]
+			[Call:Void]
+				[Const:haxe.iterators.ArrayIterator<hl.UI16>] super
+				[Cast:Dynamic] [Const:Unknown<47>] null
 			[Binop:hl.types.ArrayBytes_hl_UI16]
 				[Field:hl.types.ArrayBytes_hl_UI16]
 					[Const:hl.types.BytesIterator_hl_UI16] this
@@ -11,22 +14,19 @@ class hl.types.BytesIterator_hl_UI16 {
 						hl.types.BytesIterator_hl_UI16
 						a:hl.types.ArrayBytes_hl_UI16
 				=
-				[Local a(3933):hl.types.ArrayBytes_hl_UI16:hl.types.ArrayBytes_hl_UI16]
-
-	var pos:Int;
+				[Local a(4421):hl.types.ArrayBytes_hl_UI16:hl.types.ArrayBytes_hl_UI16]
 
 	var a:hl.types.ArrayBytes_hl_UI16;
 
-	@:maybeUsed
-	public function hasNext[Function:Void -> Bool]
+	public function hasNext[Function:() -> Bool]
 		[Block:Dynamic]
 			[Return:Dynamic]
 				[Binop:Bool]
 					[Field:Int]
 						[Const:hl.types.BytesIterator_hl_UI16] this
 						[FInstance:Int]
-							hl.types.BytesIterator_hl_UI16
-							pos:Int
+							haxe.iterators.ArrayIterator<hl.UI16>
+							current:Int
 					<
 					[Field:Int]
 						[Field:hl.types.ArrayBytes_hl_UI16]
@@ -38,10 +38,9 @@ class hl.types.BytesIterator_hl_UI16 {
 							hl.types.ArrayBase
 							length:Int
 
-	@:maybeUsed
-	public function next[Function:Void -> hl.UI16]
+	public function next[Function:() -> hl.UI16]
 		[Block:Dynamic]
-			[Var this1(3931):hl.BytesAccess<hl.UI16>]
+			[Var this1(4419):hl.BytesAccess<hl.UI16>]
 				[Field:hl.BytesAccess<hl.UI16>]
 					[Field:hl.types.ArrayBytes_hl_UI16]
 						[Const:hl.types.BytesIterator_hl_UI16] this
@@ -51,18 +50,18 @@ class hl.types.BytesIterator_hl_UI16 {
 					[FInstance:hl.BytesAccess<hl.UI16>]
 						hl.types.ArrayBytes_hl_UI16
 						bytes:hl.BytesAccess<hl.UI16>
-			[Var pos(3932):Int]
+			[Var pos(4420):Int]
 				[Unop:Int]
 					++
 					Postfix
 					[Field:Int]
 						[Const:hl.types.BytesIterator_hl_UI16] this
 						[FInstance:Int]
-							hl.types.BytesIterator_hl_UI16
-							pos:Int
+							haxe.iterators.ArrayIterator<hl.UI16>
+							current:Int
 			[Return:Dynamic]
 				[Call:hl.UI16]
-					[Ident:(hl.BytesAccess<hl.UI16>, Int) -> Unknown<41>] $bget
-					[Cast:hl.BytesAccess<hl.UI16>] [Local this1(3931):hl.BytesAccess<hl.UI16>:hl.BytesAccess<hl.UI16>]
-					[Local pos(3932):Int:Int]
+					[Ident:(hl.BytesAccess<hl.UI16>, Int) -> Unknown<48>] $bget
+					[Local this1(4419):hl.BytesAccess<hl.UI16>:hl.BytesAccess<hl.UI16>]
+					[Local pos(4420):Int:Int]
 }

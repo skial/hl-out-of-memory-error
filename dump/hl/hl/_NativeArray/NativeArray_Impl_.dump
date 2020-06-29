@@ -1,20 +1,17 @@
 @:keep @:directlyUsed @:used
 private class hl._NativeArray.NativeArray_Impl_ {
 
-	@:impl
-	public static var length(never,never):Int;
-
 	@:impl @:hlNative("std", "array_type")
 	public static function getType[Function:(this : hl.NativeArray<hl.NativeArray.T>) -> hl.Type]
-		[Arg:hl.NativeArray<hl.NativeArray.T>] [Local this1(1186):hl.NativeArray<hl.NativeArray.T>]
+		[Arg:hl.NativeArray<hl.NativeArray.T>] [Local this1(861):hl.NativeArray<hl.NativeArray.T>]
 		[Block:Dynamic] [Return:Dynamic] [Const:hl.Type] null
 
 	@:impl @:hlNative("std", "array_blit")
 	public static function blit[Function:(this : hl.NativeArray<hl.NativeArray.T>, pos : Int, src : hl.NativeArray<hl.NativeArray.T>, srcPos : Int, srcLen : Int) -> Void]
-		[Arg:hl.NativeArray<hl.NativeArray.T>] [Local this1(758):hl.NativeArray<hl.NativeArray.T>]
-		[Arg:Int] [Local pos(759):Int]
-		[Arg:hl.NativeArray<hl.NativeArray.T>] [Local src(760):hl.NativeArray<hl.NativeArray.T>]
-		[Arg:Int] [Local srcPos(761):Int]
-		[Arg:Int] [Local srcLen(762):Int]
+		[Arg:hl.NativeArray<hl.NativeArray.T>] [Local this1(444):hl.NativeArray<hl.NativeArray.T>]
+		[Arg:Int] [Local pos(445):Int]
+		[Arg:hl.NativeArray<hl.NativeArray.T>] [Local src(446):hl.NativeArray<hl.NativeArray.T>]
+		[Arg:Int] [Local srcPos(447):Int]
+		[Arg:Int] [Local srcLen(448):Int]
 		[Block:Void]
 }

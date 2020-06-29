@@ -1,304 +1,300 @@
 @:keep @:used @:coreApi
 class Type {
 
-	static var allTypes(never,never):hl.types.BytesMap;
-
 	@:has_untyped @:keep
-	static function init[Function:Void -> Void]
-		[Block:Unknown<15>]
-			[Call:Unknown<15>]
-				[Ident:hl.types.BytesMap -> Unknown<14>] $allTypes
+	static function init[Function:() -> Void]
+		[Block:Unknown<19>]
+			[Call:Unknown<19>]
+				[Ident:hl.types.BytesMap -> Unknown<18>] $allTypes
 				[Block:hl.types.BytesMap]
-					[Var this1(443):hl.types.BytesMapData]
+					[Var this1(102):hl.types.BytesMapData]
 					[Binop:hl.types.BytesMapData]
-						[Local this1(443):hl.types.BytesMapData:hl.types.BytesMapData]
+						[Local this1(102):hl.types.BytesMapData:hl.types.BytesMapData]
 						=
 						[Call:hl.types.BytesMapData]
-							[Field:Void -> hl.types.BytesMapData]
-								[TypeExpr hl.types._BytesMap.BytesMap_Impl_:Class<hl.types._BytesMap.BytesMap_Impl_>]
-								[FStatic:Void -> hl.types.BytesMapData]
+							[Field:() -> hl.types.BytesMapData]
+								[TypeExpr hl.types._BytesMap.BytesMap_Impl_:Abstract<hl.types.BytesMap>]
+								[FStatic:() -> hl.types.BytesMapData]
 									hl.types._BytesMap.BytesMap_Impl_
-									alloc:Void -> hl.types.BytesMapData
-					[Cast:hl.types.BytesMap] [Local this1(443):hl.types.BytesMapData:hl.types.BytesMapData]
+									alloc:() -> hl.types.BytesMapData
+					[Cast:hl.types.BytesMap] [Local this1(102):hl.types.BytesMapData:hl.types.BytesMapData]
 
 	@:keep
 	static function initClass[Function:(ct : hl.Type, t : hl.Type, name : hl.Bytes) -> hl.Class]
-		[Arg:hl.Type] [Local ct(444):hl.Type]
-		[Arg:hl.Type] [Local t(445):hl.Type]
-		[Arg:hl.Bytes] [Local name(446):hl.Bytes]
+		[Arg:hl.Type] [Local ct(103):hl.Type]
+		[Arg:hl.Type] [Local t(104):hl.Type]
+		[Arg:hl.Bytes] [Local name(105):hl.Bytes]
 		[Block:Dynamic]
-			[Var c(448):hl.Class]
+			[Var c(107):hl.Class]
 				[Call:Dynamic]
 					[Field:(this : hl.Type) -> Dynamic]
-						[TypeExpr hl._Type.Type_Impl_:Class<hl._Type.Type_Impl_>]
+						[TypeExpr hl._Type.Type_Impl_:Abstract<hl.Type>]
 						[FStatic:(this : hl.Type) -> Dynamic]
 							hl._Type.Type_Impl_
 							allocObject:(this : hl.Type) -> Dynamic
-					[Local ct(444):hl.Type:hl.Type]
+					[Local ct(103):hl.Type:hl.Type]
 			[Call:Bool]
 				[Field:(this : hl.Type, v : Dynamic) -> Bool]
-					[TypeExpr hl._Type.Type_Impl_:Class<hl._Type.Type_Impl_>]
+					[TypeExpr hl._Type.Type_Impl_:Abstract<hl.Type>]
 					[FStatic:(this : hl.Type, v : Dynamic) -> Bool]
 						hl._Type.Type_Impl_
 						setGlobal:(this : hl.Type, v : Dynamic) -> Bool
-				[Local t(445):hl.Type:hl.Type]
-				[Local c(448):hl.Class:hl.Class]
+				[Local t(104):hl.Type:hl.Type]
+				[Local c(107):hl.Class:hl.Class]
 			[Binop:hl.Type]
 				[Field:hl.Type]
-					[Local c(448):hl.Class:hl.Class]
+					[Local c(107):hl.Class:hl.Class]
 					[FInstance:hl.Type]
 						hl.BaseType
 						__type__:hl.Type
 				=
-				[Local t(445):hl.Type:hl.Type]
-			[Var s(454):String]
+				[Local t(104):hl.Type:hl.Type]
+			[Var s(113):String]
 				[Call:String]
-					[Ident:Class<String> -> Unknown<11>] $new
+					[Ident:Class<String> -> Unknown<14>] $new
 					[TypeExpr String:Class<String>]
 			[Binop:hl.Bytes]
 				[Field:hl.Bytes]
-					[Local s(454):String:String]
+					[Local s(113):String:String]
 					[FInstance:hl.Bytes]
 						String
 						bytes:hl.Bytes
 				=
-				[Local name(446):hl.Bytes:hl.Bytes]
+				[Local name(105):hl.Bytes:hl.Bytes]
 			[Binop:Int]
 				[Field:Int]
-					[Local s(454):String:String]
+					[Local s(113):String:String]
 					[FInstance:Int]
 						String
 						length:Int
 				=
 				[Call:Int]
 					[Field:(this : hl.Bytes, bytePos : Int) -> Int]
-						[TypeExpr hl._Bytes.Bytes_Impl_:Class<hl._Bytes.Bytes_Impl_>]
+						[TypeExpr hl._Bytes.Bytes_Impl_:Abstract<hl.Bytes>]
 						[FStatic:(this : hl.Bytes, bytePos : Int) -> Int]
 							hl._Bytes.Bytes_Impl_
 							ucs2Length:(this : hl.Bytes, bytePos : Int) -> Int
-					[Local name(446):hl.Bytes:hl.Bytes]
+					[Local name(105):hl.Bytes:hl.Bytes]
 					[Const:Int] 0
 			[Binop:String]
 				[Field:String]
-					[Local c(448):hl.Class:hl.Class]
+					[Local c(107):hl.Class:hl.Class]
 					[FInstance:String]
 						hl.Class
 						__name__:String
 				=
-				[Local s(454):String:String]
+				[Local s(113):String:String]
 			[Call:Void]
 				[Field:(b : hl.Bytes, t : hl.BaseType) -> Void]
 					[TypeExpr Type:Class<Type>]
 					[FStatic:(b : hl.Bytes, t : hl.BaseType) -> Void]
 						Type
 						register:(b : hl.Bytes, t : hl.BaseType) -> Void
-				[Local name(446):hl.Bytes:hl.Bytes]
-				[Local c(448):hl.Class:hl.Class]
-			[Return:Dynamic] [Local c(448):hl.Class:hl.Class]
+				[Local name(105):hl.Bytes:hl.Bytes]
+				[Local c(107):hl.Class:hl.Class]
+			[Return:Dynamic] [Local c(107):hl.Class:hl.Class]
 
 	@:keep
 	static function initEnum[Function:(et : hl.Type, t : hl.Type) -> hl.Enum]
-		[Arg:hl.Type] [Local et(462):hl.Type]
-		[Arg:hl.Type] [Local t(463):hl.Type]
+		[Arg:hl.Type] [Local et(121):hl.Type]
+		[Arg:hl.Type] [Local t(122):hl.Type]
 		[Block:Dynamic]
-			[Var e(464):hl.Enum]
+			[Var e(123):hl.Enum]
 				[Call:Dynamic]
 					[Field:(this : hl.Type) -> Dynamic]
-						[TypeExpr hl._Type.Type_Impl_:Class<hl._Type.Type_Impl_>]
+						[TypeExpr hl._Type.Type_Impl_:Abstract<hl.Type>]
 						[FStatic:(this : hl.Type) -> Dynamic]
 							hl._Type.Type_Impl_
 							allocObject:(this : hl.Type) -> Dynamic
-					[Local et(462):hl.Type:hl.Type]
+					[Local et(121):hl.Type:hl.Type]
 			[Binop:hl.Type]
 				[Field:hl.Type]
-					[Local e(464):hl.Enum:hl.Enum]
+					[Local e(123):hl.Enum:hl.Enum]
 					[FInstance:hl.Type]
 						hl.BaseType
 						__type__:hl.Type
 				=
-				[Local t(463):hl.Type:hl.Type]
+				[Local t(122):hl.Type:hl.Type]
 			[Binop:hl.NativeArray<Dynamic>]
 				[Field:hl.NativeArray<Dynamic>]
-					[Local e(464):hl.Enum:hl.Enum]
+					[Local e(123):hl.Enum:hl.Enum]
 					[FInstance:hl.NativeArray<Dynamic>]
 						hl.Enum
 						__evalues__:hl.NativeArray<Dynamic>
 				=
 				[Call:hl.NativeArray<Dynamic>]
 					[Field:(this : hl.Type) -> hl.NativeArray<Dynamic>]
-						[TypeExpr hl._Type.Type_Impl_:Class<hl._Type.Type_Impl_>]
+						[TypeExpr hl._Type.Type_Impl_:Abstract<hl.Type>]
 						[FStatic:(this : hl.Type) -> hl.NativeArray<Dynamic>]
 							hl._Type.Type_Impl_
 							getEnumValues:(this : hl.Type) -> hl.NativeArray<Dynamic>
-					[Local t(463):hl.Type:hl.Type]
-			[Var s(476):hl.Bytes]
+					[Local t(122):hl.Type:hl.Type]
+			[Var s(135):hl.Bytes]
 				[Call:hl.Bytes]
 					[Field:(this : hl.Type) -> hl.Bytes]
-						[TypeExpr hl._Type.Type_Impl_:Class<hl._Type.Type_Impl_>]
+						[TypeExpr hl._Type.Type_Impl_:Abstract<hl.Type>]
 						[FStatic:(this : hl.Type) -> hl.Bytes]
 							hl._Type.Type_Impl_
 							getNameBytes:(this : hl.Type) -> hl.Bytes
-					[Cast:hl.Type] [Local t(463):hl.Type:hl.Type]
-			[Var tmp(7865):Null<String>]
+					[Local t(122):hl.Type:hl.Type]
+			[Var tmp(8401):Null<String>]
 			[If:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
-						[Local s(476):hl.Bytes:hl.Bytes]
+						[Local s(135):hl.Bytes:hl.Bytes]
 						==
 						[Const:hl.Bytes] null
 				[Then:Null<String>] [Binop:Null<String>]
-					[Local tmp(7865):Null<String>:Null<String>]
+					[Local tmp(8401):Null<String>:Null<String>]
 					=
 					[Const:String] null
 				[Else:String] [Block:String]
-					[Var s1(477):String]
+					[Var s1(136):String]
 						[Call:String]
-							[Ident:Class<String> -> Unknown<11>] $new
+							[Ident:Class<String> -> Unknown<14>] $new
 							[TypeExpr String:Class<String>]
 					[Binop:hl.Bytes]
 						[Field:hl.Bytes]
-							[Local s1(477):String:String]
+							[Local s1(136):String:String]
 							[FInstance:hl.Bytes]
 								String
 								bytes:hl.Bytes
 						=
-						[Local s(476):hl.Bytes:hl.Bytes]
+						[Local s(135):hl.Bytes:hl.Bytes]
 					[Binop:Int]
 						[Field:Int]
-							[Local s1(477):String:String]
+							[Local s1(136):String:String]
 							[FInstance:Int]
 								String
 								length:Int
 						=
 						[Call:Int]
 							[Field:(this : hl.Bytes, bytePos : Int) -> Int]
-								[TypeExpr hl._Bytes.Bytes_Impl_:Class<hl._Bytes.Bytes_Impl_>]
+								[TypeExpr hl._Bytes.Bytes_Impl_:Abstract<hl.Bytes>]
 								[FStatic:(this : hl.Bytes, bytePos : Int) -> Int]
 									hl._Bytes.Bytes_Impl_
 									ucs2Length:(this : hl.Bytes, bytePos : Int) -> Int
-							[Local s(476):hl.Bytes:hl.Bytes]
+							[Local s(135):hl.Bytes:hl.Bytes]
 							[Const:Int] 0
 					[Binop:Null<String>]
-						[Local tmp(7865):Null<String>:Null<String>]
+						[Local tmp(8401):Null<String>:Null<String>]
 						=
-						[Local s1(477):String:String]
+						[Local s1(136):String:String]
 			[Binop:String]
 				[Field:String]
-					[Local e(464):hl.Enum:hl.Enum]
+					[Local e(123):hl.Enum:hl.Enum]
 					[FInstance:String]
 						hl.Enum
 						__ename__:String
 				=
-				[Cast:String] [Local tmp(7865):Null<String>:Null<String>]
-			[Var this1(480):hl.types.BytesMapData]
+				[Cast:String] [Local tmp(8401):Null<String>:Null<String>]
+			[Var this1(139):hl.types.BytesMapData]
 				[Call:hl.types.BytesMapData]
-					[Field:Void -> hl.types.BytesMapData]
-						[TypeExpr hl.types._BytesMap.BytesMap_Impl_:Class<hl.types._BytesMap.BytesMap_Impl_>]
-						[FStatic:Void -> hl.types.BytesMapData]
+					[Field:() -> hl.types.BytesMapData]
+						[TypeExpr hl.types._BytesMap.BytesMap_Impl_:Abstract<hl.types.BytesMap>]
+						[FStatic:() -> hl.types.BytesMapData]
 							hl.types._BytesMap.BytesMap_Impl_
-							alloc:Void -> hl.types.BytesMapData
+							alloc:() -> hl.types.BytesMapData
 			[Binop:hl.types.BytesMap]
 				[Field:hl.types.BytesMap]
-					[Local e(464):hl.Enum:hl.Enum]
+					[Local e(123):hl.Enum:hl.Enum]
 					[FInstance:hl.types.BytesMap]
 						hl.Enum
 						__emap__:hl.types.BytesMap
 				=
-				[Cast:hl.types.BytesMap] [Local this1(480):hl.types.BytesMapData:hl.types.BytesMapData]
+				[Cast:hl.types.BytesMap] [Local this1(139):hl.types.BytesMapData:hl.types.BytesMapData]
 			[Binop:Array<String>]
 				[Field:Array<String>]
-					[Local e(464):hl.Enum:hl.Enum]
+					[Local e(123):hl.Enum:hl.Enum]
 					[FInstance:Array<String>]
 						hl.Enum
 						__constructs__:Array<String>
 				=
 				[New:Array<String>] Array<String>
-			[Var cl(482):hl.NativeArray<hl.Bytes>]
+			[Var cl(141):hl.NativeArray<hl.Bytes>]
 				[Call:hl.NativeArray<hl.Bytes>]
 					[Field:(this : hl.Type) -> hl.NativeArray<hl.Bytes>]
-						[TypeExpr hl._Type.Type_Impl_:Class<hl._Type.Type_Impl_>]
+						[TypeExpr hl._Type.Type_Impl_:Abstract<hl.Type>]
 						[FStatic:(this : hl.Type) -> hl.NativeArray<hl.Bytes>]
 							hl._Type.Type_Impl_
 							getEnumFields:(this : hl.Type) -> hl.NativeArray<hl.Bytes>
-					[Local t(463):hl.Type:hl.Type]
+					[Local t(122):hl.Type:hl.Type]
 			[Block:Void]
-				[Var _g(498):Int] [Const:Int] 0
-				[Var _g1(499):Int]
+				[Var _g(155):Int] [Const:Int] 0
+				[Var _g1(156):Int]
 					[Call:Int]
-						[Ident:hl.NativeArray<hl.Bytes> -> Unknown<16>] $asize
-						[Cast:hl.NativeArray<hl.Bytes>] [Local cl(482):hl.NativeArray<hl.Bytes>:hl.NativeArray<hl.Bytes>]
+						[Ident:hl.NativeArray<hl.Bytes> -> Unknown<20>] $asize
+						[Local cl(141):hl.NativeArray<hl.Bytes>:hl.NativeArray<hl.Bytes>]
 				[While:Void]
 					[Parenthesis:Bool]
 						[Binop:Bool]
-							[Local _g(498):Int:Int]
+							[Local _g(155):Int:Int]
 							<
-							[Local _g1(499):Int:Int]
+							[Local _g1(156):Int:Int]
 					[Block:Dynamic]
-						[Var i(486):Int]
+						[Var i(145):Int]
 							[Unop:Int]
 								++
 								Postfix
-								[Local _g(498):Int:Int]
-						[Var name(493):hl.Bytes]
-							[Cast:hl.Bytes]
-								[Cast:hl.Bytes]
-									[Call:hl.Bytes]
-										[Ident:(hl.NativeArray<hl.Bytes>, Int) -> hl.Bytes] $aget
-										[Cast:hl.NativeArray<hl.Bytes>] [Local cl(482):hl.NativeArray<hl.Bytes>:hl.NativeArray<hl.Bytes>]
-										[Local i(486):Int:Int]
+								[Local _g(155):Int:Int]
+						[Var name(150):hl.Bytes]
+							[Call:hl.Bytes]
+								[Ident:(hl.NativeArray<hl.Bytes>, Int) -> hl.Bytes] $aget
+								[Local cl(141):hl.NativeArray<hl.Bytes>:hl.NativeArray<hl.Bytes>]
+								[Local i(145):Int:Int]
 						[Call:Void]
 							[Field:(this : hl.types.BytesMapData, key : hl.Bytes, value : Dynamic) -> Void]
-								[TypeExpr hl.types._BytesMap.BytesMap_Impl_:Class<hl.types._BytesMap.BytesMap_Impl_>]
+								[TypeExpr hl.types._BytesMap.BytesMap_Impl_:Abstract<hl.types.BytesMap>]
 								[FStatic:(this : hl.types.BytesMapData, key : hl.Bytes, value : Dynamic) -> Void]
 									hl.types._BytesMap.BytesMap_Impl_
 									set:(this : hl.types.BytesMapData, key : hl.Bytes, value : Dynamic) -> Void
 							[Field:hl.types.BytesMap]
-								[Local e(464):hl.Enum:hl.Enum]
+								[Local e(123):hl.Enum:hl.Enum]
 								[FInstance:hl.types.BytesMap]
 									hl.Enum
 									__emap__:hl.types.BytesMap
-							[Local name(493):hl.Bytes:hl.Bytes]
-							[Local i(486):Int:Int]
-						[Var e1(7869):Array<String>]
+							[Local name(150):hl.Bytes:hl.Bytes]
+							[Local i(145):Int:Int]
+						[Var e(8405):Array<String>]
 							[Field:Array<String>]
-								[Local e(464):hl.Enum:hl.Enum]
+								[Local e(123):hl.Enum:hl.Enum]
 								[FInstance:Array<String>]
 									hl.Enum
 									__constructs__:Array<String>
-						[Var s2(497):String]
+						[Var s(154):String]
 							[Call:String]
-								[Ident:Class<String> -> Unknown<11>] $new
+								[Ident:Class<String> -> Unknown<14>] $new
 								[TypeExpr String:Class<String>]
 						[Binop:hl.Bytes]
 							[Field:hl.Bytes]
-								[Local s2(497):String:String]
+								[Local s(154):String:String]
 								[FInstance:hl.Bytes]
 									String
 									bytes:hl.Bytes
 							=
-							[Local name(493):hl.Bytes:hl.Bytes]
+							[Local name(150):hl.Bytes:hl.Bytes]
 						[Binop:Int]
 							[Field:Int]
-								[Local s2(497):String:String]
+								[Local s(154):String:String]
 								[FInstance:Int]
 									String
 									length:Int
 							=
 							[Call:Int]
 								[Field:(this : hl.Bytes, bytePos : Int) -> Int]
-									[TypeExpr hl._Bytes.Bytes_Impl_:Class<hl._Bytes.Bytes_Impl_>]
+									[TypeExpr hl._Bytes.Bytes_Impl_:Abstract<hl.Bytes>]
 									[FStatic:(this : hl.Bytes, bytePos : Int) -> Int]
 										hl._Bytes.Bytes_Impl_
 										ucs2Length:(this : hl.Bytes, bytePos : Int) -> Int
-								[Local name(493):hl.Bytes:hl.Bytes]
+								[Local name(150):hl.Bytes:hl.Bytes]
 								[Const:Int] 0
 						[Call:Int]
 							[Field:(x : String) -> Int]
-								[Local e1(7869):Array<String>:Array<String>]
+								[Local e(8405):Array<String>:Array<String>]
 								[FInstance:(x : String) -> Int]
 									Array<String>
 									push:(x : Array.T) -> Int
-							[Local s2(497):String:String]
+							[Local s(154):String:String]
 			[Call:Void]
 				[Field:(b : hl.Bytes, t : hl.BaseType) -> Void]
 					[TypeExpr Type:Class<Type>]
@@ -307,36 +303,36 @@ class Type {
 						register:(b : hl.Bytes, t : hl.BaseType) -> Void
 				[Field:hl.Bytes]
 					[Field:String]
-						[Local e(464):hl.Enum:hl.Enum]
+						[Local e(123):hl.Enum:hl.Enum]
 						[FInstance:String]
 							hl.Enum
 							__ename__:String
 					[FInstance:hl.Bytes]
 						String
 						bytes:hl.Bytes
-				[Local e(464):hl.Enum:hl.Enum]
+				[Local e(123):hl.Enum:hl.Enum]
 			[Call:Bool]
 				[Field:(this : hl.Type, v : Dynamic) -> Bool]
-					[TypeExpr hl._Type.Type_Impl_:Class<hl._Type.Type_Impl_>]
+					[TypeExpr hl._Type.Type_Impl_:Abstract<hl.Type>]
 					[FStatic:(this : hl.Type, v : Dynamic) -> Bool]
 						hl._Type.Type_Impl_
 						setGlobal:(this : hl.Type, v : Dynamic) -> Bool
-				[Local t(463):hl.Type:hl.Type]
-				[Local e(464):hl.Enum:hl.Enum]
-			[Return:Dynamic] [Local e(464):hl.Enum:hl.Enum]
+				[Local t(122):hl.Type:hl.Type]
+				[Local e(123):hl.Enum:hl.Enum]
+			[Return:Dynamic] [Local e(123):hl.Enum:hl.Enum]
 
 	@:keep
 	static function register[Function:(b : hl.Bytes, t : hl.BaseType) -> Void]
-		[Arg:hl.Bytes] [Local b(455):hl.Bytes]
-		[Arg:hl.BaseType] [Local t(456):hl.BaseType]
+		[Arg:hl.Bytes] [Local b(114):hl.Bytes]
+		[Arg:hl.BaseType] [Local t(115):hl.BaseType]
 		[Block:Void]
 			[Call:Void]
 				[Field:(this : hl.types.BytesMapData, key : hl.Bytes, value : Dynamic) -> Void]
-					[TypeExpr hl.types._BytesMap.BytesMap_Impl_:Class<hl.types._BytesMap.BytesMap_Impl_>]
+					[TypeExpr hl.types._BytesMap.BytesMap_Impl_:Abstract<hl.types.BytesMap>]
 					[FStatic:(this : hl.types.BytesMapData, key : hl.Bytes, value : Dynamic) -> Void]
 						hl.types._BytesMap.BytesMap_Impl_
 						set:(this : hl.types.BytesMapData, key : hl.Bytes, value : Dynamic) -> Void
-				[Call:hl.types.BytesMap] [Ident:Void -> Unknown<17>] $allTypes
-				[Local b(455):hl.Bytes:hl.Bytes]
-				[Local t(456):hl.BaseType:hl.BaseType]
+				[Call:hl.types.BytesMap] [Ident:() -> Unknown<21>] $allTypes
+				[Local b(114):hl.Bytes:hl.Bytes]
+				[Local t(115):hl.BaseType:hl.BaseType]
 }

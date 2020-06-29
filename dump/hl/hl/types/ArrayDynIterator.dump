@@ -1,9 +1,12 @@
 @:keep @:directlyUsed @:used
-class hl.types.ArrayDynIterator {
+class hl.types.ArrayDynIterator extends haxe.iterators.ArrayIterator<Dynamic> {
 
 	public function new[Function:(a : hl.types.ArrayBase) -> Void]
-		[Arg:hl.types.ArrayBase] [Local a(1678):hl.types.ArrayBase]
-		[Block:Int]
+		[Arg:hl.types.ArrayBase] [Local a(2227):hl.types.ArrayBase]
+		[Block:hl.types.ArrayBase]
+			[Call:Void]
+				[Const:haxe.iterators.ArrayIterator<Dynamic>] super
+				[Cast:Dynamic] [Const:Unknown<60>] null
 			[Binop:hl.types.ArrayBase]
 				[Field:hl.types.ArrayBase]
 					[Const:hl.types.ArrayDynIterator] this
@@ -11,53 +14,31 @@ class hl.types.ArrayDynIterator {
 						hl.types.ArrayDynIterator
 						a:hl.types.ArrayBase
 				=
-				[Local a(1678):hl.types.ArrayBase:hl.types.ArrayBase]
-			[Binop:Int]
-				[Field:Int]
-					[Const:hl.types.ArrayDynIterator] this
-					[FInstance:Int]
-						hl.types.ArrayDynIterator
-						len:Int
-				=
-				[Field:Int]
-					[Local a(1678):hl.types.ArrayBase:hl.types.ArrayBase]
-					[FInstance:Int]
-						hl.types.ArrayBase
-						length:Int
-			[Binop:Int]
-				[Field:Int]
-					[Const:hl.types.ArrayDynIterator] this
-					[FInstance:Int]
-						hl.types.ArrayDynIterator
-						pos:Int
-				=
-				[Const:Int] 0
+				[Local a(2227):hl.types.ArrayBase:hl.types.ArrayBase]
 
 	var a:hl.types.ArrayBase;
 
-	var len:Int;
-
-	var pos:Int;
-
-	@:maybeUsed
-	public function hasNext[Function:Void -> Bool]
+	public function hasNext[Function:() -> Bool]
 		[Block:Dynamic]
 			[Return:Dynamic]
 				[Binop:Bool]
 					[Field:Int]
 						[Const:hl.types.ArrayDynIterator] this
 						[FInstance:Int]
-							hl.types.ArrayDynIterator
-							pos:Int
+							haxe.iterators.ArrayIterator<Dynamic>
+							current:Int
 					<
 					[Field:Int]
-						[Const:hl.types.ArrayDynIterator] this
+						[Field:hl.types.ArrayBase]
+							[Const:hl.types.ArrayDynIterator] this
+							[FInstance:hl.types.ArrayBase]
+								hl.types.ArrayDynIterator
+								a:hl.types.ArrayBase
 						[FInstance:Int]
-							hl.types.ArrayDynIterator
-							len:Int
+							hl.types.ArrayBase
+							length:Int
 
-	@:maybeUsed
-	public function next[Function:Void -> Unknown<52>]
+	public function next[Function:() -> Unknown<61>]
 		[Block:Dynamic]
 			[Return:Dynamic]
 				[Call:Dynamic]
@@ -76,6 +57,6 @@ class hl.types.ArrayDynIterator {
 						[Field:Int]
 							[Const:hl.types.ArrayDynIterator] this
 							[FInstance:Int]
-								hl.types.ArrayDynIterator
-								pos:Int
+								haxe.iterators.ArrayIterator<Dynamic>
+								current:Int
 }

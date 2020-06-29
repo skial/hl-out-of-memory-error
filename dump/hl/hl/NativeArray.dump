@@ -1,2 +1,2 @@
 @:used @:coreType
-abstract hl.NativeArray<T : hl.NativeArray.T> {}
+abstract hl.NativeArray<T> {}

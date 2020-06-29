@@ -1,1 +1,1 @@
-typedef Iterator<T : Iterator.T> = { next : Void -> Iterator.T, hasNext : Void -> Bool }
+typedef Iterator<T> = { next : () -> Iterator.T, hasNext : () -> Bool }

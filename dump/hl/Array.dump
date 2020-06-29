@@ -1,5 +1,5 @@
 @:directlyUsed @:used
-extern class Array<T : Array.T> {
+extern class Array<T> {
 
 	function new():Void;
 
@@ -31,16 +31,23 @@ extern class Array<T : Array.T> {
 
 	function remove(x:Array.T):Bool;
 
+	@:pure
+	function contains(x:Array.T):Bool;
+
 	function indexOf(x:Array.T, fromIndex:Null<Int>):Int;
 
 	function lastIndexOf(x:Array.T, fromIndex:Null<Int>):Int;
 
 	function copy():Array<Array.T>;
 
-	function iterator():Iterator<Array.T>;
+	@:maybeUsed @:runtime
+	inline function iterator():haxe.iterators.ArrayIterator<Array.T>;
+
+	@:pure @:runtime
+	inline function keyValueIterator():haxe.iterators.ArrayKeyValueIterator<Array.T>;
 
 	@:runtime
-	inline function map<S : map.S>(f:Array.T -> map.S):Array<map.S>;
+	inline function map<S>(f:Array.T -> map.S):Array<map.S>;
 
 	@:runtime
 	inline function filter(f:Array.T -> Bool):Array<Array.T>;

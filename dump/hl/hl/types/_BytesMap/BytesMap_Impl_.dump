@@ -2,12 +2,12 @@
 private class hl.types._BytesMap.BytesMap_Impl_ {
 
 	@:hlNative("std", "hballoc")
-	static function alloc[Function:Void -> hl.types.BytesMapData] [Block:Dynamic] [Return:Dynamic] [Const:hl.types.BytesMapData] null
+	static function alloc[Function:() -> hl.types.BytesMapData] [Block:Dynamic] [Return:Dynamic] [Const:hl.types.BytesMapData] null
 
 	@:impl @:hlNative("std", "hbset")
 	public static function set[Function:(this : hl.types.BytesMapData, key : hl.Bytes, value : Dynamic) -> Void]
-		[Arg:hl.types.BytesMapData] [Local this1(459):hl.types.BytesMapData]
-		[Arg:hl.Bytes] [Local key(460):hl.Bytes]
-		[Arg:Dynamic] [Local value(461):Dynamic]
+		[Arg:hl.types.BytesMapData] [Local this1(118):hl.types.BytesMapData]
+		[Arg:hl.Bytes] [Local key(119):hl.Bytes]
+		[Arg:Dynamic] [Local value(120):Dynamic]
 		[Block:Void]
 }
